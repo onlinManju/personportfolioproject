@@ -1,0 +1,9 @@
+<h1>All Blogs</h1>
+
+{% for blog in blogs %}
+    <h2>{{ blog.title }}</h2>
+     <p>{{ blog.content }}</p>
+    <p>{{ blog.date }}</p>
+    <a href="{% url 'detail' blog.id %}">Read more</a>
+    <hr>
+{% endfor %}
